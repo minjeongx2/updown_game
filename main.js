@@ -33,40 +33,41 @@ function go(){
     userNumber.value = ''
 
     if(USER_NUMBER < 1 || USER_NUMBER > 100){
-        resultArea.textContent = "1과100 사이의 숫자를 입력해주세요"
+        resultArea.textContent = "1 ~ 100 사이만 입력해줭"
         return
     }
 
     if(USER_NUMBER < computerNumber){
-        resultArea.textContent = "Up ↑"
+        resultArea.textContent = "더크게 up!"
     } else if(USER_NUMBER > computerNumber){
-        resultArea.textContent = "Down ↓"
+        resultArea.textContent = "더작게 Down!"
     } else {
-        resultArea.textContent = "That's right!"
+        resultArea.textContent = "정다아아압!!!!"
         gameRightOver = true
     }
 
     if(gameRightOver == true){
         goButton.disabled = true
-        chanceArea.textContent = `남은 기회 : ${--chance}번째에 맞추었어요!`
+        chanceArea.textContent = `남은 기회 ${--chance}번째에 맞추었넹`
         return
     }
 
     if(userNumberList.includes(USER_NUMBER)){
-        resultArea.textContent = "같은 숫자를 입력했어요~"
+        resultArea.textContent = "같은 숫자를 입력했엉"
         return
     }
 
     chance--
     userNumberList.push(USER_NUMBER)
-    chanceArea.textContent = `남은 기회 : ${chance}번`
+    chanceArea.textContent = `남은 기회는 ${chance} 번`
+    
 
     if(chance == 0){
         gameOver = true
     }
     if(gameOver == true){
         goButton.disabled = true
-        resultArea.textContent = "실패...!"
+        resultArea.textContent = "실패다아앗...!!!"
         return
     }
 }
@@ -75,9 +76,9 @@ function go(){
 
 function reset(){
     pickRandomNumber()
-    resultArea.textContent = "시작해봅시다~!"
+    resultArea.textContent = "시작해보자구~!"
     chance = 7
-    chanceArea.textContent = `남은 기회 : ${chance}번`
+    chanceArea.textContent = `총 기회는 ${chance} 번`
     userNumber.value = ""
     goButton.disabled = false
     gameOver = false

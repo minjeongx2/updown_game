@@ -1,0 +1,52 @@
+@import url(reset.css);
+@import url(common.css);
+
+.game_wrap{
+    max-width: 960px;
+    width: 100%;
+    margin: 50px auto;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game_wrap > h1{
+    font-size: 100px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.game_wrap > h1 > span:nth-child(6){
+    margin-right: 50px;
+}
+
+
+
+.area_wrap{
+    width: 700px;
+    height: 400px;
+    background: url(../img/main.png) no-repeat top center;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.area_wrap > div:first-child{
+    font-size: 50px;
+    font-family: var(--mainFont);
+    font-weight: 900;
+}
+
+.area_wrap > div:last-child{
+    font-size: 35px;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+

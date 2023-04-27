@@ -5,15 +5,42 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>updown game</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
 </head>
 <body>
-    <h1>UpDown game</h1>
-    <div id="result_area">시작해봅시다~!</div>
-    <div id="chance_area">남은 기회 : 7번</div>
-    <input id="user_number" type="number" placeholder="1 ~ 100사이의 숫자를 입력해주세요.">
-    <button id="go_btn">Go</button>
-    <button id="reset_btn">Reset</button>
+    <div class="wrap">
+        <div class="game_wrap">
+            <h1>
+                <span>U</span>
+                <span>p</span>
+                <span>D</span>
+                <span>o</span>
+                <span>w</span>
+                <span>n</span>
+                <span>g</span>
+                <span>a</span>
+                <span>m</span>
+                <span>e</span>
+            </h1>
+
+            <div class="area_wrap">
+                <div id="result_area">시작해보자구~!</div>
+                <div id="chance_area">총 기회는 7 번</div>
+            </div>
+
+            <div class="input_go_wrap">
+                <input id="user_number" type="number" placeholder="1 ~ 100사이의 숫자를 입력해줘">
+                <button id="go_btn">Go</button>
+            </div>
+
+            <button id="reset_btn">Reset</button>
+        </div>
+    </div>
+    
 
     <script src="main.js"></script>
     
