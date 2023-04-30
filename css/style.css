@@ -1,29 +1,43 @@
 @import url(reset.css);
 @import url(common.css);
 
+body{
+    background-color: #fccc21;
+    
+}
+
 .game_wrap{
-    max-width: 960px;
+    height: 95vh;
+    max-width: 800px;
     width: 100%;
-    margin: 50px auto;
-    background-color: lightblue;
+    margin: 20px auto;
+    background-color: rgb(154, 213, 233);
+    border-radius: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: rgba(28, 135, 171, .2) 0px 4px 20px, rgba(28, 135, 171, .2) 0px 8px 28px, rgba(28, 135, 171, .2) 0px 16px 60px;
 }
 
 .game_wrap > h1{
+    margin: 20px 0;
     font-size: 100px;
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
+    text-shadow: 3px 3px 3px gray;
+    animation: move alternate infinite ease-in-out .7s;
 }
 
-
-
+@keyframes move {
+    to{
+        transform: scale(1.2);
+    }
+}
 .game_wrap > h1 > span:nth-child(6){
     margin-right: 50px;
 }
-
+/*----- h1_end -----*/
 
 
 .area_wrap{
@@ -49,4 +63,66 @@
     font-weight: 700;
     padding-bottom: 10px;
 }
+/*----- area_wrap_end-----*/
+
+
+.input_go_wrap{
+    display: flex;
+    gap: 10px;
+}
+
+.input_go_wrap > input{
+    width: 300px;
+    height: 100px;
+    font-size: 40px;
+    font-weight: 900;
+    border: 8px solid rgba(0, 0, 0, 1);
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 3px 3px 3px gray;
+}
+
+#go_btn{
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    font-size: 50px;
+    font-weight: bold;
+    color: #e50012;
+    border: 8px solid #000;
+    border-radius: 50%;
+    background-color: #fccc21;
+    box-shadow: 3px 3px 3px gray;
+    transition: all .3s;
+}
+
+#go_btn:hover{
+    color: #fff;
+    
+    border-color: #e50012;
+}
+/*----- input_go_wrap_end -----*/
+
+
+#reset_btn{
+    cursor: pointer;
+    width: 130px;
+    height: 80px;
+    margin: 15px 0;
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(15, 15, 253);
+    border: 8px solid #000;
+    border-radius: 25px;
+    background-color: #fccc21;
+    box-shadow: 3px 3px 3px gray;
+    transition: all .3s;
+}
+
+#reset_btn:hover{
+    color: #fff;
+    border-color: rgb(15, 15, 253);
+}
+/*----- reset_btn_end -----*/
+
 
